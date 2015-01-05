@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="ydle.settings.roomtype.controller.class">Ydle\Bundle\SettingsBundle\Controller\RoomTypeController</parameter>
+        <parameter key="ydle.settings.nodetype.controller.class">Ydle\Bundle\SettingsBundle\Controller\NodeTypeController</parameter>
+        <parameter key="ydle.settings.logs.controller.class">Ydle\Bundle\SettingsBundle\Controller\LogsController</parameter>
+        <parameter key="ydle.settings.nodes.controller.class">Ydle\Bundle\SettingsBundle\Controller\NodeController</parameter>
+        <parameter key="ydle.settings.rooms.controller.class">Ydle\Bundle\SettingsBundle\Controller\RoomController</parameter>
+    </parameters>
+
+    <services>
+        <service id="ydle.settings.roomtype.controller" class="Ydle\Bundle\SettingsBundle\Controller\RoomTypeController">
+            <argument type="service" id="ydle.roomtype.manager" />
+            <argument type="service" id="service_container" />
+        </service>
+        <service id="ydle.settings.nodetype.controller" class="%ydle.settings.nodetype.controller.class%">
+            <argument type="service" id="ydle.nodetype.manager" />
+            <argument type="service" id="service_container" />
+        </service>
+        <service id="ydle.settings.logs.controller" class="%ydle.settings.logs.controller.class%">
+            <argument type="service" id="ydle.logger" />
+            <argument type="service" id="service_container" />
+        </service>
+        <service id="ydle.settings.nodes.controller" class="%ydle.settings.nodes.controller.class%">
+            <argument type="service" id="ydle.node.manager" />
+            <argument type="service" id="service_container" />
+        </service>
+        <service id="ydle.settings.rooms.controller" class="%ydle.settings.rooms.controller.class%">
+            <argument type="service" id="ydle.room.manager" />
+            <argument type="service" id="service_container" />
+        </service>
+    </services>
+
+</container>

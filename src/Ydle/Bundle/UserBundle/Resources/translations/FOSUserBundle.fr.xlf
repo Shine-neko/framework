@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2014-03-05T14:23:38Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="60b22a12c8221d7ba940710481e85d58f04882b7" resname="action.connexion">
+        <source>action.connexion</source>
+        <target>Connexion</target>
+        <jms:reference-file line="39">views/Security/login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="550ddf1fdf8f777487623feaec559a7e3f7265fb" resname="action.create.account">
+        <source>action.create.account</source>
+        <target>Créer un compte</target>
+        <jms:reference-file line="40">views/Security/login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2dd036f414c8dfc2b51f97720efe5a7219d87ff8" resname="confirmation.title">
+        <source>confirmation.title</source>
+        <target>Confirmez votre mot de passe</target>
+        <jms:reference-file line="24">views/Registration/register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a92726bad87c5ac3957fab36da70813dcf6061be" resname="email.title">
+        <source>email.title</source>
+        <target>Votre e-mail</target>
+        <jms:reference-file line="6">views/Registration/register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c17ca0293eb2c2962703139d8b9fb7f2c3457f02" resname="inscription.title">
+        <source>inscription.title</source>
+        <target>S'enregistrer</target>
+        <jms:reference-file line="31">views/Registration/register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="309a2f78631c80427d2f343b30060329f0ab4de8" resname="login.title">
+        <source>login.title</source>
+        <target>Pseudo</target>
+        <jms:reference-file line="12">views/Registration/register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c58d11eac79aad56a56304b7bc03d4ae720041a1" resname="password.title">
+        <source>password.title</source>
+        <target>Mot de passe</target>
+        <jms:reference-file line="18">views/Registration/register_content.html.twig</jms:reference-file>
+        <jms:reference-file line="24">views/Security/login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c6a152c14cf98bbe621b7a28c5d9b377e099556f" resname="pseudo.title">
+        <source>pseudo.title</source>
+        <target>Pseudo</target>
+        <jms:reference-file line="18">views/Security/login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="184a343c16c7d78687816499ae3a9aedcf14bf38" resname="remember.me.title">
+        <source>remember.me.title</source>
+        <target>Se souvenir de moi</target>
+        <jms:reference-file line="33">views/Security/login.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

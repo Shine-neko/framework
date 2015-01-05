@@ -1,0 +1,82 @@
+#
+#  This file is part of Ydle.
+#
+#    Ydle is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU  Lesser General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    Ydle is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU  Lesser General Public License for more details.
+#
+#    You should have received a copy of the GNU Lesser General Public License
+#    along with Ydle.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+##################
+#      API       #
+##################
+api_rooms:
+    pattern: /api/rooms
+    defaults: { _controller: YdleAPIBundle:Default:rooms }
+    requirements:
+        _method:  GET
+
+api_room_get:
+    pattern: /api/room/{id}
+    defaults: { _controller: YdleAPIBundle:Default:room }
+    requirements:
+        id:  \d+
+        _method:  GET
+
+api_room_add:
+    pattern: /api/room
+    defaults: { _controller: YdleAPIBundle:Default:addRoom }
+    requirements:
+        _method:  POST
+
+api_room_edit:
+    pattern: /api/room/{id}
+    defaults: { _controller: YdleAPIBundle:Default:editRoom }
+    requirements:
+        id:  \d+
+        _method:  PUT
+
+api_room_delete:
+    pattern: /api/room/{id}
+    defaults: { _controller: YdleAPIBundle:Default:deleteRoom }
+    requirements:
+        id:  \d+
+        _method:  DELETE 
+ 
+api_data:
+    pattern: /api/node/data
+    defaults: { _controller: YdleAPIBundle:Default:data }
+    requirements:
+        _method:  POST
+        
+api_room_types:
+    pattern: /api/roomtypes
+    defaults: { _controller: YdleAPIBundle:Default:roomTypes }
+    requirements:
+        _method:  GET
+
+api_node_types:
+    pattern: /api/nodetypes
+    defaults: { _controller: YdleAPIBundle:Default:nodeTypes }
+    requirements:
+        _method:  GET
+        
+api_log_add:
+    pattern: /api/log/add
+    defaults: { _controller: YdleAPIBundle:Default:addLog }
+    requirements:
+        _method:  POST
+        
+api_logs_add:
+    pattern: /api/logs/add
+    defaults: { _controller: YdleAPIBundle:Default:addLogs }
+    requirements:
+        _method:  POST

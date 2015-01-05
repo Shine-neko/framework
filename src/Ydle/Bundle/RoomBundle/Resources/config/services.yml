@@ -1,0 +1,28 @@
+#  This file is part of Ydle.
+#
+#    Ydle is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU  Lesser General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    Ydle is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU  Lesser General Public License for more details.
+#
+#    You should have received a copy of the GNU Lesser General Public License
+#    along with Ydle.  If not, see <http://www.gnu.org/licenses/>.
+parameters:
+  ydle.roomtype.entity.class: Ydle\Bundle\RoomBundle\Model\RoomType
+  ydle.roomtype.manager.class: Ydle\Bundle\RoomBundle\Manager\RoomTypeManager
+  ydle.room.manager.class: Ydle\Bundle\RoomBundle\Manager\RoomManager
+
+services:
+  ydle.roomtypes.manager:
+    class: %ydle.roomtype.manager.class%
+    arguments: 
+      entityManager: "@doctrine.orm.entity_manager"
+  ydle.rooms.manager:
+    class: %ydle.room.manager.class%
+    arguments: 
+      entityManager: "@doctrine.orm.entity_manager"
